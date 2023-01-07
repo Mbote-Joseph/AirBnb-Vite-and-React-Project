@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
+import Footer from './components/Footer'
 import Section from './components/Section'
 import Card from './components/Card'
 import wedding from './components/images/wedding.png'
@@ -59,6 +60,8 @@ function App() {
       price:"50"
   }
   ];
+
+  console.log(Data);
   // <Card image={image} rating="5.0" stars="6" country="USA" text="Life lessons with Katie Zaferes
   //   " price="136"/>
   //   <Card image={wedding} rating="5.0" stars="30" country="UK" text="Learn wedding photography
@@ -77,13 +80,15 @@ function App() {
       Data.map(element => {
         return (
           <Card key={element.text} image={element.image} rating={element.rating} stars={element.stars} country={element.country} text={element.text} price={element.price}/>
+          
         )
       })
     }
     
     </div>
+    <Footer />
     
-   
+    
     </div>
   )
 }
