@@ -5,7 +5,7 @@
     left:0px;
     bottom: 0px;
     background:#fff;
-    box-shadow:  2.98256px 7.456px rgba(0,0,0,0.1);
+    box-shadow:  2.98256px 7.456px  rgba(0,0,0,0.1);
     display: flex;
     justify-content: space-around;
 }
@@ -15,4 +15,8 @@
     height: 25.35px;
     left: 30px;
     top: 22px;
+}
+.footer i{
+    font-size: 30px;
+    margin-right: 20px;
 }
