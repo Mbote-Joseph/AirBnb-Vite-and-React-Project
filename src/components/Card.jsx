@@ -6,7 +6,7 @@ let Card=({ image,rating,stars,country, text, price})=>{
             <div className="card">
             <img className="cardimage" src={image} alt="_blank"/>
             <br/>
-            <i class="ri-star-fill"></i> {rating} <span>({stars}).{country}</span>
+            <i className="ri-star-fill"></i> {rating} <span>({stars}).{country}</span>
             <br/>
             {text}
             <br/>

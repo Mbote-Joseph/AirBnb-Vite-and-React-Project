@@ -33,6 +33,38 @@ function App() {
   //       Click on the Vite and React logos to learn more
   //     </p>
   //   </div>
+  const Data=[
+    {
+      image: image,
+      rating: "5.0",
+      stars:"6",
+      country:"USA",
+      text:"Life lessons with Katie Zaferes",
+      price:"136"
+    },
+    {
+      image:wedding,
+      rating:"5.0",
+      stars:"30",
+      country:"UK",
+      text:"Learn wedding photography",
+      price:"125"
+    },
+    {
+      image:mountain,
+      rating:"4.8",
+      stars:"2",
+      country:"Canada",
+      text:"Group Mountain Biking",
+      price:"50"
+  }
+  ];
+  // <Card image={image} rating="5.0" stars="6" country="USA" text="Life lessons with Katie Zaferes
+  //   " price="136"/>
+  //   <Card image={wedding} rating="5.0" stars="30" country="UK" text="Learn wedding photography
+  //   " price="125"/>
+  //   <Card image={mountain} rating="4.8" stars="2" country="Canada" text="Group Mountain Biking
+  //   " price="50"/>
 
   return (
     <div>
@@ -40,12 +72,14 @@ function App() {
     <Hero/>
     <Section className="section" />
     <div className="cardSection">
-    <Card image={image} rating="5.0" stars="6" country="USA" text="Life lessons with Katie Zaferes
-    " price="136"/>
-    <Card image={wedding} rating="5.0" stars="30" country="UK" text="Learn wedding photography
-    " price="125"/>
-    <Card image={mountain} rating="4.8" stars="2" country="Canada" text="Group Mountain Biking
-    " price="50"/>
+    
+    {
+      Data.map(element => {
+        return (
+          <Card key={element.text} image={element.image} rating={element.rating} stars={element.stars} country={element.country} text={element.text} price={element.price}/>
+        )
+      })
+    }
     
     </div>
     
